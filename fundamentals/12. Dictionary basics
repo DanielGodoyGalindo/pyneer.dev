@@ -1,0 +1,16 @@
+def safe_get(d, key, default):
+    # Use get() to safely retrieve value or return default
+    # Example: safe_get({"a": 1}, "b", 0) -> 0
+    return d.get(key, default)
+
+def get_all_items(d):
+    # Return list of all (key, value) pairs using items()
+    # Example: get_all_items({"a": 1, "b": 2}) -> [("a", 1), ("b", 2)]
+    return list(d.items())
+
+def merge_dicts(d1, d2):
+    # Update d1 with all key-value pairs from d2 using update()
+    # Return the updated d1
+    # Example: merge_dicts({"a": 1}, {"b": 2}) -> {"a": 1, "b": 2}
+    d1.update(d2)
+    return d1
