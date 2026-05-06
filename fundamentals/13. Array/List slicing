@@ -1,0 +1,14 @@
+def get_middle_elements(arr):
+    # Return elements from index 1 to -1 (exclusive)
+    # Example: [1,2,3,4,5] -> [2,3,4]
+    return arr[1:-1]
+
+def reverse_list_slice(arr):
+    # Return reversed list using slicing
+    # Example: [1,2,3] -> [3,2,1]
+    return arr[::-1]
+
+def get_every_second(arr):
+    # Return every second element starting from index 0
+    # Example: [0,1,2,3,4,5] -> [0,2,4]
+    return arr[::2]
