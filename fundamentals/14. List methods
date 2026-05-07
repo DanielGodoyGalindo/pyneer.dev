@@ -1,0 +1,20 @@
+def add_to_list(arr, items):
+    # Add all items from the items list to arr using extend
+    # Return the modified arr
+    arr.extend(items)
+    return arr
+print(add_to_list([1, 2], [3, 4]))
+
+def remove_and_get_last(arr):
+    # Remove and return the last element using pop
+    # Return the element and the modified arr as tuple: (element, arr)
+    element = arr.pop()
+    return (element, arr)
+print(remove_and_get_last([1,2,3,4]))
+
+def insert_at_beginning(arr, value):
+    # Insert value at the beginning (index 0) using insert
+    # Return the modified arr
+    arr.insert(0, value)
+    return arr
+print(insert_at_beginning([1,2,3,4],5))
