@@ -117,32 +117,56 @@ def clear_list(arr):
     return arr
 print(clear_list(["remove", "all", "elements"]))
 
-@ to-do
 def add_sort_pop(arr, value):
     # Append value, sort the list, then pop the last element
     # Return a tuple: (popped_element, modified_arr)
-    pass
+    arr = arr.copy()
+    arr.append(value)
+    arr.sort()
+    return (arr.pop(), arr)
+print(add_sort_pop([5,2,9,3,0,8], 1))
 
 def insert_and_reverse(arr, index, value):
     # Insert value at index, then reverse the list
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    arr.insert(index, value)
+    arr.reverse()
+    return arr
+print(insert_and_reverse([2,9,6,1,4,3], 3, 5))
 
 def extend_remove_first(arr, items, value):
     # Extend arr with items, then remove the first occurrence of value
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    arr.extend(items)
+    try:
+      arr.remove(value)
+    except ValueError as e:
+      return f"{value} not found. Error: {e}"
+    return arr
+print(extend_remove_first([12,45,39,60], [27,81], 13))
 
 def count_and_append(arr, value):
     # Count how many times value appears, append that count to arr
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    arr.append(arr.count(value))
+    return arr
+print(count_and_append([1,2,4,5,2,6,7,2,2,9], 2))
 
 def pop_and_insert_front(arr, index):
     # Pop the element at index, insert it at the beginning
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    try:
+      arr.insert(0, arr.pop(index))
+    except IndexError as err:
+      return f"Index {index} is out of range. Error: {err}"
+    return arr
+print(pop_and_insert_front([3,4,5,6,7,8], 3))
 
+@ to-do
 def sort_and_clear_if_long(arr, limit):
     # Sort arr, and if its length exceeds limit, clear the list
     # Return the modified arr
