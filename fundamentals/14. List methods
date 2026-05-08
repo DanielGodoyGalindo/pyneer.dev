@@ -1,6 +1,7 @@
 def add_to_list(arr, items):
     # Add all items from the items list to arr using extend
     # Return the modified arr
+    arr = arr.copy()
     arr.extend(items)
     return arr
 print(add_to_list([1, 2], [3, 4]))
@@ -8,6 +9,7 @@ print(add_to_list([1, 2], [3, 4]))
 def remove_and_get_last(arr):
     # Remove and return the last element using pop
     # Return the element and the modified arr as tuple: (element, arr)
+    arr = arr.copy()
     element = arr.pop()
     return (element, arr)
 print(remove_and_get_last([1,2,3,4]))
@@ -15,6 +17,102 @@ print(remove_and_get_last([1,2,3,4]))
 def insert_at_beginning(arr, value):
     # Insert value at the beginning (index 0) using insert
     # Return the modified arr
+    arr = arr.copy()
     arr.insert(0, value)
     return arr
 print(insert_at_beginning([1,2,3,4],5))
+
+def append_item(arr, value):
+    # Append value to the end of arr using append
+    # Return the modified arr
+    arr = arr.copy()
+    arr.append(value)
+    return arr
+print(append_item([1,2,3], 4))
+
+def extend_list(arr, items):
+    # Extend arr by adding all elements from items using extend
+    # Return the modified arr
+    arr = arr.copy()
+    arr.extend(items)
+    return arr
+print(extend_list([1,2,3], [4,5,6]))
+
+def insert_in_middle(arr, index, value):
+    # Insert value at the given index using insert
+    # Return the modified arr
+    arr = arr.copy()
+    arr.insert(index,value)
+    return arr
+print(insert_in_middle([1,2,3], 1, 9))
+
+def remove_first_occurrence(arr, value):
+    # Remove the first occurrence of value using remove
+    # Return the modified arr
+    arr = arr.copy()
+    arr.remove(value)
+    return arr
+print(remove_first_occurrence(["a","b","c","d"], "c"))
+
+def pop_last(arr):
+    # Remove and return the last element using pop()
+    # Return a tuple: (element, arr)
+    arr = arr.copy()
+    return (arr.pop(), arr)
+print(pop_last([1,2,3,4,5]))
+  
+
+def pop_at_index(arr, index):
+    # Remove and return the element at the given index using pop(index)
+    # Return a tuple: (element, arr)
+    arr = arr.copy()
+    try:
+      return (arr.pop(index), arr)
+    except IndexError as e:
+      return (None, f"Error: {e}")
+print(pop_at_index([1,2,3,4,5,6], 12))
+
+def find_index(arr, value):
+    # Return the index of the first occurrence of value using index
+    try:
+      return arr.index(value)
+    except ValueError as e:
+      return f"Index not found for value: {value}"
+print(find_index(["a","b","c","d"], "e"))
+
+def count_value(arr, value):
+    # Return how many times value appears in arr using count
+    return arr.count(value)
+print(count_value(["a","b","b","c","b","d"], "b"))
+
+def sort_list(arr):
+    # Sort arr in ascending order using sort()
+    # Return the modified arr
+    arr = arr.copy()
+    arr.sort()
+    return arr
+print(sort_list(["apple","orange","banana","grape","peach","kiwi"]))
+
+def sort_list_desc(arr):
+    # Sort arr in descending order using sort(reverse=True)
+    # Return the modified arr
+    arr = arr.copy()
+    arr.sort(reverse=True)
+    return arr
+print(sort_list_desc(["apple","orange","banana","grape","peach","kiwi"]))
+
+def reverse_list(arr):
+    # Reverse arr in place using reverse()
+    # Return the modified arr
+    arr = arr.copy()
+    arr.reverse()
+    return arr
+print(reverse_list(["a","b","c","d"]))
+
+def clear_list(arr):
+    # Remove all elements from arr using clear()
+    # Return the modified arr
+    arr = arr.copy()
+    arr.clear()
+    return arr
+print(clear_list(["remove", "all", "elements"]))
