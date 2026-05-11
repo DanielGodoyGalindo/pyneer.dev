@@ -166,27 +166,48 @@ def pop_and_insert_front(arr, index):
     return arr
 print(pop_and_insert_front([3,4,5,6,7,8], 3))
 
-@ to-do
 def sort_and_clear_if_long(arr, limit):
     # Sort arr, and if its length exceeds limit, clear the list
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    arr.sort()
+    if len(arr) > limit:
+      arr.clear()
+    return arr
+print(sort_and_clear_if_long(["h","e","l","l","o"], 7))
 
 def remove_and_append_length(arr, value):
     # Remove the first occurrence of value, then append the new length of arr
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    arr.remove(value)
+    arr.append(len(arr))
+    return arr
+print(remove_and_append_length(["this","is","just","an","example"], "just"))
 
 def extend_sort_reverse(arr, items):
     # Extend arr with items, sort it, then reverse it
     # Return the modified arr
-    pass
+    arr = arr.copy()
+    arr.extend(items)
+    arr.sort()
+    arr.reverse()
+    return arr
+print(extend_sort_reverse(["how","are","you"],["my","friend"]))
 
 def pop_two_and_count(arr):
     # Pop the last two elements, count how many remain, return (count, arr)
-    pass
+    arr = arr.copy()
+    arr.pop()
+    arr.pop()
+    return (len(arr), arr)
+print(pop_two_and_count([1,2,3,4,5,6]))
 
 def insert_and_remove_last(arr, index, value):
     # Insert value at index, then remove the last element using pop()
     # Return a tuple: (removed_element, modified_arr)
-    pass
+    arr = arr.copy()
+    arr.insert(index, value)
+    removed_element = arr.pop()
+    return (removed_element, arr)
+print(insert_and_remove_last(["a","b","c","d","e","f"], 3, "z"))
