@@ -1,0 +1,19 @@
+def split_and_join(text, separator):
+    # Split text by separator, then join with "-"
+    # Example: split_and_join("a,b,c", ",") -> "a-b-c"
+    splitted=text.split(separator)
+    output="-".join(splitted)
+    return output
+print(split_and_join("a,b,c",","))
+
+def clean_string(text):
+    # Remove leading/trailing whitespace and convert to lowercase
+    # Example: clean_string("  HELLO  ") -> "hello"
+    return text.strip().lower()
+print(clean_string("  HELLO  "))
+
+def replace_all(text, old, new):
+    # Replace all occurrences of old with new
+    # Example: replace_all("hello", "l", "L") -> "heLLo"
+    return text.replace(old,new)
+print(replace_all("hello", "l", "L"))
