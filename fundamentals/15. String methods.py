@@ -40,18 +40,22 @@ print(strip_spaces("  hello  "))
 def replace_vowels(text):
     # Replace all vowels with "*" using replace()
     # Example: replace_vowels("hello") -> "h*ll*"
-    pass
+    for letter in "aeiou":
+        text = text.replace(letter, "*")
+    return text
 print(replace_vowels("hello"))
 
 def to_uppercase(text):
     # Convert text to uppercase using upper()
     # Example: to_uppercase("hello") -> "HELLO"
-    pass
+    return text.upper()
+print(to_uppercase("hello"))
 
 def to_lowercase(text):
     # Convert text to lowercase using lower()
     # Example: to_lowercase("HELLO") -> "hello"
-    pass
+    return text.lower()
+print(to_uppercase("GOODBYE"))
 
 def starts_with_prefix(text, prefix):
     # Return True if text starts with prefix using startswith()
