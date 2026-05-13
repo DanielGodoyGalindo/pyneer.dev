@@ -21,22 +21,27 @@ print(replace_all("hello", "l", "L"))
 def split_into_words(text):
     # Split text into words using default whitespace separator
     # Example: split_into_words("hello world") -> ["hello", "world"]
-    pass
+    return text.split()
+print(split_into_words("hello world"))
 
 def join_with_comma(items):
     # Join all items in the list using "," as separator
     # Example: join_with_comma(["a","b","c"]) -> "a,b,c"
-    pass
+    # return items.join(",")
+    return ",".join(items)
+print(join_with_comma(["a","b","c"]))
 
 def strip_spaces(text):
     # Remove leading and trailing whitespace using strip()
     # Example: strip_spaces("  hello  ") -> "hello"
-    pass
+    return text.strip()
+print(strip_spaces("  hello  "))
 
 def replace_vowels(text):
     # Replace all vowels with "*" using replace()
     # Example: replace_vowels("hello") -> "h*ll*"
     pass
+print(replace_vowels("hello"))
 
 def to_uppercase(text):
     # Convert text to uppercase using upper()
