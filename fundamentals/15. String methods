@@ -17,3 +17,53 @@ def replace_all(text, old, new):
     # Example: replace_all("hello", "l", "L") -> "heLLo"
     return text.replace(old,new)
 print(replace_all("hello", "l", "L"))
+
+def split_into_words(text):
+    # Split text into words using default whitespace separator
+    # Example: split_into_words("hello world") -> ["hello", "world"]
+    pass
+
+def join_with_comma(items):
+    # Join all items in the list using "," as separator
+    # Example: join_with_comma(["a","b","c"]) -> "a,b,c"
+    pass
+
+def strip_spaces(text):
+    # Remove leading and trailing whitespace using strip()
+    # Example: strip_spaces("  hello  ") -> "hello"
+    pass
+
+def replace_vowels(text):
+    # Replace all vowels with "*" using replace()
+    # Example: replace_vowels("hello") -> "h*ll*"
+    pass
+
+def to_uppercase(text):
+    # Convert text to uppercase using upper()
+    # Example: to_uppercase("hello") -> "HELLO"
+    pass
+
+def to_lowercase(text):
+    # Convert text to lowercase using lower()
+    # Example: to_lowercase("HELLO") -> "hello"
+    pass
+
+def starts_with_prefix(text, prefix):
+    # Return True if text starts with prefix using startswith()
+    # Example: starts_with_prefix("hello", "he") -> True
+    pass
+
+def ends_with_suffix(text, suffix):
+    # Return True if text ends with suffix using endswith()
+    # Example: ends_with_suffix("hello", "lo") -> True
+    pass
+
+def find_substring(text, sub):
+    # Return the index of the first occurrence of sub using find()
+    # Example: find_substring("hello", "l") -> 2
+    pass
+
+def count_substring(text, sub):
+    # Count how many times sub appears in text using count()
+    # Example: count_substring("hello", "l") -> 2
+    pass
