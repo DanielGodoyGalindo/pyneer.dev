@@ -60,19 +60,23 @@ print(to_uppercase("GOODBYE"))
 def starts_with_prefix(text, prefix):
     # Return True if text starts with prefix using startswith()
     # Example: starts_with_prefix("hello", "he") -> True
-    pass
+    return text.startswith(prefix)
+print(starts_with_prefix("hello", "he"))
 
 def ends_with_suffix(text, suffix):
     # Return True if text ends with suffix using endswith()
     # Example: ends_with_suffix("hello", "lo") -> True
-    pass
+    return text.endswith(suffix)
+print(ends_with_suffix("hello", "lo"))
 
 def find_substring(text, sub):
     # Return the index of the first occurrence of sub using find()
     # Example: find_substring("hello", "l") -> 2
-    pass
+    return text.find(sub)
+print(find_substring("hello", "l"))
 
 def count_substring(text, sub):
     # Count how many times sub appears in text using count()
     # Example: count_substring("hello", "l") -> 2
-    pass
+    return text.count(sub)
+print(count_substring("hello", "l"))
