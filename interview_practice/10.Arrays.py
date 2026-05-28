@@ -74,3 +74,34 @@ def find_min(arr):
         if el < min_val:
             min_val = el
     return min_val
+
+
+print(find_min([6, 11, 2, 9]))
+
+
+def count_occurrences(arr, target):
+    # Initialize counter to 0
+    # Iterate through each element in arr
+    # If element equals target, increment counter
+    # Return counter
+    counter = 0
+    for el in arr:
+        if el == target:
+            counter += 1
+    return counter
+
+
+print(count_occurrences([1, 2, 2, 3, 2, 4, 5, 2], 2))
+
+
+def contains_value(arr, target):
+    # Iterate through each element in arr
+    # If element equals target, return True immediately (early return)
+    # If loop completes without finding target, return False
+    for el in arr:
+        if el == target:
+            return True
+    return False
+
+
+print(contains_value([1, 2, 3, 4, 5], 3))
