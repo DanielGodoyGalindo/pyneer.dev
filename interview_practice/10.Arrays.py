@@ -32,3 +32,17 @@ def remove_duplicates(arr):
 
 
 print(remove_duplicates([1, 2, 2, 3, 4, 4, 5]))
+
+
+def find_missing(arr):
+    # Calculate n (length of array)
+    # Calculate expected sum: n * (n + 1) // 2 (sum of 0 to n)
+    # Calculate actual sum: sum(arr)
+    # Return expected - actual (the missing number)
+    length = len(arr)
+    expected_sum = length * (length + 1) // 2
+    actual_sum = sum(arr)
+    return expected_sum - actual_sum
+
+
+print(find_missing([0, 1, 3]))
