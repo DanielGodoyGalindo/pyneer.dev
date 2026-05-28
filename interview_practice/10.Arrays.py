@@ -61,3 +61,16 @@ def rotate_array(arr, k):
 
 
 print(rotate_array([1, 2, 3, 4, 5], 2))
+
+
+def find_min(arr):
+    # Initialize min_val with the first element of the array
+    # Iterate through the remaining elements
+    # Compare each element with min_val
+    # Update min_val if current element is smaller
+    # Return min_val
+    min_val = arr[0]
+    for el in arr[1:]:
+        if el < min_val:
+            min_val = el
+    return min_val
