@@ -46,3 +46,18 @@ def find_missing(arr):
 
 
 print(find_missing([0, 1, 3]))
+
+
+def rotate_array(arr, k):
+    # Handle edge case: empty array
+    # Normalize k: k = k % len(arr) (handles k > len(arr))
+    # Use slicing: arr[-k:] gets last k elements, arr[:-k] gets rest
+    # Concatenate: return arr[-k:] + arr[:-k]
+    # For detailed slicing explanation, see Array/List Slicing in Python Basics
+    if not arr:
+        return arr
+    k = k % len(arr)
+    return arr[-k:] + arr[:-k]
+
+
+print(rotate_array([1, 2, 3, 4, 5], 2))
