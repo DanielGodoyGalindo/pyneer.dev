@@ -98,10 +98,11 @@ def contains_value(arr, target):
     # Iterate through each element in arr
     # If element equals target, return True immediately (early return)
     # If loop completes without finding target, return False
-    for el in arr:
-        if el == target:
-            return True
-    return False
+    # for el in arr:
+    #     if el == target:
+    #         return True
+    # return False
+    return True if target in arr else False
 
 
 print(contains_value([1, 2, 3, 4, 5], 3))
