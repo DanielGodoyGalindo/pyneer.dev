@@ -34,3 +34,27 @@ def spiral_order(matrix):
             left += 1
 
     return result
+
+
+def rotate(matrix):
+    # Method 1: Transpose then reverse rows
+    # Step 1: Transpose (swap matrix[i][j] with matrix[j][i] for i < j)
+    # Step 2: Reverse each row
+
+    # Or Method 2: Layer-by-layer rotation
+    # For each layer from outer to inner:
+    #   Rotate four corners, then move to next position
+    
+    # Input: [[1,2,3],[4,5,6],[7,8,9]]
+    # Output: [[7,4,1],[8,5,2],[9,6,3]]
+
+    n = len(matrix)
+    for i in range(0, n - 1):
+        for j in range(i + 1, n):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    for i in range(n):
+        matrix[i].reverse()
+    
+    return matrix
+        
+print(rotate([[1,2,3],[4,5,6],[7,8,9]]))
